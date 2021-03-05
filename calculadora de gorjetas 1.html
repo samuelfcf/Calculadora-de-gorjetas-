@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- referencia ao arquivo css -->
+    <title>Calculadora de Gorjetas</title>
+</head>
+<body>
+    <div id="container"> <!--declarando classe-->
+    <div >
+        <h1 class="title">Calculadora de Gorjetas</h1> <!-- title para criar estilo no css -->
+    </div>   
+    <div>
+        <form class="tipsForm" id="tipsForm"> <!-- classe para criar estilo no css -->
+            <label for="bill">
+                <p>Quanto ficou a conta?</p> <!-- texto na tela -->
+            </label>
+            <p>
+                R$ <input type="number" placeholder="100" name="bill" id="bill" class="formImput" required> <!-- gravando o valor, classe/id p css -->
+            </p>
+            <label for="serviceQual">
+                <p>Como você avalia seu serviço?</p> <!-- texto na tela -->
+            </label>
+            <p>
+              <select name="serviceQual" id="serviceQual" class="formSelect" required>    <!-- avaliando o serviço, class css e id no java -->
+                  <option disable selected>-- Escolha uma opção --</option>
+                  <option value="0.3">30% - Excelente</option>
+                  <option value="0.2">20% - Ótimo</option>
+                  <option value="0.1">10% - Bom</option>
+                  <option value="0.05">5% - Ruim</option>
+                  <option value="0.01">Sem gorjeta - Péssimo</option>
+              </select>  
+            </p>
+            <label for="people">
+                <p>Quantas pessoas vão dividir a conta?</p> <!-- texto na tela -->
+            </label>
+            <p>
+                <input type="number" placeholder="1" name="people" id="people" class="formImput" required> pessoa(s) <!--class css e id no java -->
+            </p>
+            <button type="subimit" class="formSubmit">Calcular</button>
+        </form>
+    </div> 
+    <div id="totalTips">
+        Gorjeta total:
+        R$<span id="tip">0.00</span>
+        <span id="each">cada</span>
+
+    </div>
+</div>
+<script type="text/javascript" src="script.js"></script> <!-- chamando a dinamica do java-->
+</body>
+</html> 
